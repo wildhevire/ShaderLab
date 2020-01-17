@@ -71,10 +71,10 @@
 					if (length(z >= 2)) break;
 				}
 
-				return iter / _MaxIter;
+				return sqrt(iter / _MaxIter);
 			}
 
-			fixed4 frag(v2f i) : SV_Target
+			float4 frag(v2f i) : SV_Target
 			{
 				_Iter = Mandlebrot(i.uv);
 				float3 col = hue2rgb(Mandlebrot(i.uv));

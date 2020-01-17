@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MandlebrotController : MonoBehaviour
+public class JuliaController : MonoBehaviour
 {
-    public Material mat;
-    public float zoom = 2;
-    float offsetX =0, offsetY= 0;
+    [Range(-1,1)]
+    public float offsetX;
+    [Range(-1,1)]
+    public float offsetY;
+    public float zoom = 3f;
 
-    private void Start()
+    public Material mat;
+    void Start()
     {
-        //offsetX = Screen.width / 2;
-        //offsetY = Screen.height / 2;
+        
     }
-    private void Update()
+
+    // Update is called once per frame
+    void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -42,7 +46,5 @@ public class MandlebrotController : MonoBehaviour
 
         mat.SetVector("_Offset", new Vector4(offsetX, offsetY, 0, 0));
         mat.SetFloat("_Zoom", zoom);
-
-
     }
 }
