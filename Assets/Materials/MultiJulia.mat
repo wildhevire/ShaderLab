@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MatJulia
-  m_Shader: {fileID: 4800000, guid: 718a4aaf14977364396c8afba74d8244, type: 3}
+  m_Name: MultiJulia
+  m_Shader: {fileID: 4800000, guid: c0d0c698bae18244ea6056bd1d605aac, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -55,11 +55,11 @@ Material:
     - _Cutoff: 0.5
     - _DstBlend: 0
     - _EnvironmentReflections: 1
+    - _Factor: -3
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Iter: 0
-    - _MaxIter: 500
+    - _MaxIter: 2101.92
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _QueueOffset: 0
@@ -71,16 +71,15 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _Zoom: 3
-    - _isToggled: 0
+    - _Zoom: 3.8
     m_Colors:
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _Const: {r: -0.4, g: 0.6, b: 0, a: 0}
+    - _Const: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Offset: {r: 0, g: 0, b: 2, a: 2}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
---- !u!114 &6052298034496736196
+--- !u!114 &7301332289350793790
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

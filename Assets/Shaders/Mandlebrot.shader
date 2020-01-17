@@ -2,12 +2,9 @@
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
-		_Color("Color", Color) = (.5,.5,.5,1)
 		_Offset("Offset", Vector) = (0,0,2,2)
 		_Zoom("Zoom", Float) = 2
 		_MaxIter("Max Iteration", Float) = 255
-		_Iter("Zoom", Float) = 0
     }
     SubShader
     {
@@ -42,12 +39,9 @@
                 return o;
             }
 
-            sampler2D _MainTex;
 			float4 _Offset;
-			fixed4 _Color;
 			float _Zoom;
 			float _MaxIter;
-			float _Iter;
 
 			float3 hue2rgb(float hue) {
 				hue = frac(hue); //only use fractional part of hue, making it loop
@@ -76,8 +70,9 @@
 
 			float4 frag(v2f i) : SV_Target
 			{
-				_Iter = Mandlebrot(i.uv);
-				float3 col = hue2rgb(Mandlebrot(i.uv));
+				float n = 1 - (log2(abs(Mandlebrot(i.uv))));
+				float3 col = hue2rgb(n);
+				
 				return float4(col,255);	
 				//return float4(hue2rgb(.5), 255);
             }
